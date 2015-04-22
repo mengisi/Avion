@@ -19,8 +19,7 @@
 <div>
     <img id="photo" src="img/1.jpg" alt="a"/>
 </div>
-<div gldp-el="mydate"
-     style="width:400px; height:300px; position:absolute; top:70px; left:100px;">
+<div gldp-el="mydate" style="width:400px; height:300px; position:absolute; top:70px; left:100px;">
 </div>
 
 
@@ -29,7 +28,7 @@
 <script src="glDatePicker.min.js"></script>
 <script type="text/javascript">
     $(window).load(function () {
-        $('input').glDatePicker();
+        $(document.getElementById('mydate')).glDatePicker();
     });
 </script>
 </body>
