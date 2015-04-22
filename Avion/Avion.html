@@ -8,10 +8,17 @@
 </head>
 <body>
 <form name="form1">
-    <label>Leaving from: <input type="text" id="leave"/></label>
-    <label>Flying to: <input type="text" id="arrive"/></label>
-    <label>Date: <input type="text" id="mydate"/></label>
+    <div id="form">
+        <label>Leaving from: <input onkeyup="search(this)" type="text" id="leave"/></label>
+        <div id="leave_city"></div>
+        <label>Flying to: <input onkeyup="search(this)" type="text" id="arrive"/></label>
+        <div id="flying_city"></div>
+        <label>Date: <input type="text" id="mydate"/></label>
+    </div>
 </form>
+<div>
+    <img id="photo" src="img/1.jpg" alt="a"/>
+</div>
 <div gldp-el="mydate"
      style="width:400px; height:300px; position:absolute; top:70px; left:100px;">
 </div>
