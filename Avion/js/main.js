@@ -1,40 +1,47 @@
-
 'use strict';
 
+var count = 0;
+var timerMenu = null;
 
-function cities(city_leaving) {
+window.onload = start;
+function start() {
+    create_leaving_city();
+    rouler_photo();
+}
+
+function create_leaving_city(){
     for (var i = 0; i < cities_tb.length; i++) {
-        document.getElementById("city_leaving").innerHTML += '<option value="'  + cities_tb[i].name + '">' +   cities_tb[i].name + '</option>';
+        document.getElementById("city_leaving").innerHTML += '<option value="' + cities_tb[i].name + '">' + cities_tb[i].name + '</option>';
     }
 }
 
-    function search(city) {
-        var villes = ['Montréal', 'Québec', 'Rio', 'New-York', 'Tokyo', 'Paris', 'London', 'Bombay', 'Berlin', 'Cairo'];
-        var keyword = city.value.toLowerCase();
-        var result = '';
-        if (keyword != '') {
-            for (var i = 0; i < villes.length; i++) {
-                var position = villes[i].toLowerCase().indexOf(keyword);
-                var surligne1, surligne2, surligne3;
-                if (position > -1) {
-                    surligne1 = villes[i].substring(0, position);
-                    surligne2 = '<mark>' + villes[i].substr(position, keyword.length) + '</mark>';
-                    surligne3 = villes[i].substr(position + keyword.length);
-                    result = result + '<li >' + surligne1 + surligne2 + surligne3 + '</li>';
-                }
-            }
-        }
+function rouler_photo() {
+    if (count == 4) {
+        count = 0
+    }
+    count++;
+    document.getElementById('photo').src = 'img/' + count + '.jpg';
+    setTimeout(rouler_photo, 2500);
+}
 
-        document.getElementById('leave_city').innerHTML = '<ul>' + result + '</ul>';
+
+function afficher_menu() {
+    console.log('afficher');
+    if (null != timerMenu) {
+        clearTimeout(timerMenu);  // Cancel timer
+        timerMenu = null;
+    }
+    document.getElementById('menu_cache').style.visibility = 'visible';
+    //mouse.nextElementSibling.style.visibility = 'visible';
+}
+
+function cacher_menu() {
+    console.log('cacher');
+    // mouse.style.visibility = 'hidden';
+    if (null == timerMenu) {
+        timerMenu = setTimeout(function () {
+            document.getElementById('menu_cache').style.visibility = 'hidden';
+        }, 500);
     }
 
-    var count = 0;
-     var timer=photo();
-    function photo() {
-        if (count == 4) {
-            count = 0
-        }
-        count++;
-        document.getElementById('photo').src = 'img/' + count + '.jpg';
-        setTimeout(photo, 2500);
-    }
+}

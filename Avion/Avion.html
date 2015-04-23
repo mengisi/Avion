@@ -7,14 +7,47 @@
     <link href="styles/glDatePicker.default.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
+<div id="menu">
+
+    <div id="menu1" class="list1">
+        <a href="#" onmouseenter="afficher_menu()" onmouseout="cacher_menu()">List1</a>
+        <div id="menu_cache" >
+            <a href="#" onmouseenter="afficher_menu()"  onmouseout="cacher_menu()" >List2</a>
+            <a href="#" onmouseenter="afficher_menu()"  onmouseout="cacher_menu()" >List2</a>
+            <a href="#" onmouseenter="afficher_menu()"  onmouseout="cacher_menu()" >List2</a>
+            <a href="#" onmouseenter="afficher_menu()"  onmouseout="cacher_menu()" >List2</a>
+        </div>
+    </div>
+
+    <div class="list1">
+        <a href="#"  >List1</a>
+        <div >
+            <a href="#">List2</a>
+            <a href="#">List2</a>
+            <a href="#">List2</a>
+            <a href="#">List2</a>
+        </div>
+    </div>
+
+    <div class="list1">
+        <a href="#" >List1</a>
+    </div>
+
+    <div class="list1">
+        <a href="#" >List1</a>
+    </div>
+
+
+</div>
+
 <div id="header">
     <img id="photo" src="img/1.jpg" alt="a"/>
 </div>
 <div id="main">
 	<form name="form1">
     	<div id="form">
-        	<!--<label>Leaving from: <input onkeyup="search(this)" type="text" id="leave"/></label>-->
-        	<label>Leaving from: <input list="city_leaving"/>
+        	<label>Leaving from: <input id="in" list="city_leaving" />
         	</label>
 				<datalist id="city_leaving">
 				</datalist>
@@ -41,8 +74,8 @@
 </div>
 
 
-<script src="js/main.js"></script>
 <script src="js/cities.js"></script>
+<script src="js/main.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="glDatePicker.min.js"></script>
 <script type="text/javascript">

@@ -1,5 +1,5 @@
 
-cities_tb = [
+var cities_tb = [
     {name:'Tokyo',			        country:'Japan',		                    pop: 34100000},
     {name:'Mexico City',			country:'Mexico',		                    pop: 22650000},
     {name:'Seoul',			        country:'South Korea',		                pop: 22250000},
