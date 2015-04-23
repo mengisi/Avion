@@ -7,23 +7,40 @@
     <link href="styles/glDatePicker.default.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form name="form1">
-    <div id="form">
-        <label>Leaving from: <input onkeyup="search(this)" type="text" id="leave"/></label>
-        <div id="leave_city"></div>
-        <label>Flying to: <input onkeyup="search(this)" type="text" id="arrive"/></label>
-        <div id="flying_city"></div>
-        <label>Date: <input type="text" id="mydate"/></label>
-    </div>
-</form>
-<div>
+<div id="header">
     <img id="photo" src="img/1.jpg" alt="a"/>
 </div>
-<div gldp-el="mydate" style="width:400px; height:300px; position:absolute; top:70px; left:100px;">
+<div id="main">
+	<form name="form1">
+    	<div id="form">
+        	<!--<label>Leaving from: <input onkeyup="search(this)" type="text" id="leave"/></label>-->
+        	<label>Leaving from: <input list="city_leaving" value"Leaving from" onkeyup="cities();">
+        	</label>
+				<datalist id="city_leaving">
+				</datalist>
+			<label>Flying to: <input onkeyup="search(this)" type="text" id="arrive"/></label>
+			<label>Date: <input type="text" id="mydate"/></label>
+			<label>Nºperson <input list="persons" id="persons" size="4"/></label><br/>
+				<datalist id="persons">
+					<option value="1">
+					<option value="2">
+					<option value="3">
+					<option value="4">
+					<option value="5">
+					<option value="6">
+				</datalist>
+			<button><a href="formulaire.html">Go</a></button>
+			
+			<div id="leave_city"></div>
+			<div id="flying_city"></div>
+		</div>
+	</form>
+	<div gldp-el="mydate" style="width:400px; height:300px; position:absolute; top:70px; left:100px;"></div>
 </div>
 
 
 <script src="js/main.js"></script>
+<script src="js/cities.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="glDatePicker.min.js"></script>
 <script type="text/javascript">

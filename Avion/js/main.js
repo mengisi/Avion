@@ -1,5 +1,12 @@
 
 'use strict';
+
+cities();
+function cities(city_leaving){
+	for (var i = 0; i < cities.length; i++) {
+	document.getElementById("city_leaving").innerHTML += '<option>' + cities_tb[i].value;
+}
+
 function search(city) {
     var villes = ['Montréal', 'Québec', 'Rio', 'New-York', 'Tokyo', 'Paris', 'London', 'Bombay', 'Berlin', 'Cairo'];
     var keyword = city.value.toLowerCase();
@@ -20,7 +27,6 @@ function search(city) {
     document.getElementById('leave_city').innerHTML = '<ul>' + result + '</ul>';
 }
 
-
 var count = 0;
 var timer=photo();
 function photo() {
@@ -29,7 +35,7 @@ function photo() {
     }
     count++;
     document.getElementById('photo').src = 'img/' + count + '.jpg';
-    setTimeout(photo,1500);
+    setTimeout(photo,2500);
 }
 
 
