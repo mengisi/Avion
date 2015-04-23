@@ -1,4 +1,28 @@
+
 body{
-    margin:2% 15%;
+    margin:2% 13%;
     background-color: lightgrey;
+    border:10px solid #bb5e5e;
 }
+#header{
+	background-color: #bb5e5e;
+}
+img{
+	width: 98%;
+	padding:0% 1%
+	
+}
+#main{
+	background-color: lightgrey;
+	border:5px solid #bb5e5e;
+	padding:5px;
+}
+
+datalist { 
+    display: none;
+}
+a:link{
+	text-decoration: none;
+	color:black;
+}
+
