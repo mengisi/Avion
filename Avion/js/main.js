@@ -3,8 +3,8 @@
 
 cities();
 function cities(city_leaving) {
-    for (var i = 0; i < cities.length; i++) {
-        document.getElementById("city_leaving").innerHTML += '<option>' + cities_tb[i].value;
+    for (var i = 0; i < cities_tb.length; i++) {
+        document.getElementById("city_leaving").innerHTML += '<option>' + cities_tb[i].value + '</option>';
     }
 }
 
