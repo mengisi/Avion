@@ -1,10 +1,10 @@
 
 'use strict';
 
-cities();
+
 function cities(city_leaving) {
     for (var i = 0; i < cities_tb.length; i++) {
-        document.getElementById("city_leaving").innerHTML += '<option>' + cities_tb[i].value + '</option>';
+        document.getElementById("city_leaving").innerHTML += '<option value="'  + cities_tb[i].name + '">' +   cities_tb[i].name + '</option>';
     }
 }
 
@@ -29,8 +29,7 @@ function cities(city_leaving) {
     }
 
     var count = 0;
-    var timer = photo();
-
+     var timer=photo();
     function photo() {
         if (count == 4) {
             count = 0
@@ -39,7 +38,3 @@ function cities(city_leaving) {
         document.getElementById('photo').src = 'img/' + count + '.jpg';
         setTimeout(photo, 2500);
     }
-
-
-
-
