@@ -2,16 +2,18 @@
 
 var count = 0;
 var timerMenu = null;
+var showHideCount = 0;
 
 window.onload = start;
 function start() {
-    create_leaving_city();
+    create_city_tb();
     rouler_photo();
 }
 
-function create_leaving_city(){
+function create_city_tb() {
     for (var i = 0; i < cities_tb.length; i++) {
         document.getElementById("city_leaving").innerHTML += '<option value="' + cities_tb[i].name + '">' + cities_tb[i].name + '</option>';
+        document.getElementById("destination").innerHTML += '<option value="' + cities_tb[i].name + '">' + cities_tb[i].name + '</option>';
     }
 }
 
@@ -26,22 +28,21 @@ function rouler_photo() {
 
 
 function afficher_menu() {
-    console.log('afficher');
+    showHideCount++;
+    console.log('afficher : ', showHideCount);
     if (null != timerMenu) {
         clearTimeout(timerMenu);  // Cancel timer
         timerMenu = null;
     }
     document.getElementById('menu_cache').style.visibility = 'visible';
-    //mouse.nextElementSibling.style.visibility = 'visible';
 }
 
 function cacher_menu() {
-    console.log('cacher');
-    // mouse.style.visibility = 'hidden';
-    if (null == timerMenu) {
+    showHideCount--;
+    console.log('cacher : ', showHideCount);
+    if ((null == timerMenu) && (0 == showHideCount)) {
         timerMenu = setTimeout(function () {
             document.getElementById('menu_cache').style.visibility = 'hidden';
-        }, 500);
+        }, 2000);
     }
-
 }

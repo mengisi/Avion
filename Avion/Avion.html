@@ -8,68 +8,50 @@
 </head>
 <body>
 
-<div id="menu">
-
-    <div id="menu1" class="list1">
+    <div id="menu">
         <a href="#" onmouseenter="afficher_menu()" onmouseout="cacher_menu()">List1</a>
-        <div id="menu_cache" >
-            <a href="#" onmouseenter="afficher_menu()"  onmouseout="cacher_menu()" >List2</a>
-            <a href="#" onmouseenter="afficher_menu()"  onmouseout="cacher_menu()" >List2</a>
-            <a href="#" onmouseenter="afficher_menu()"  onmouseout="cacher_menu()" >List2</a>
-            <a href="#" onmouseenter="afficher_menu()"  onmouseout="cacher_menu()" >List2</a>
+
+        <div id="menu_cache">
+            <a href="#" onmouseenter="afficher_menu()" onmouseout="cacher_menu()">List2</a>
+            <a href="#" onmouseenter="afficher_menu()" onmouseout="cacher_menu()">List2</a>
+            <a href="#" onmouseenter="afficher_menu()" onmouseout="cacher_menu()">List2</a>
+            <a href="#" onmouseenter="afficher_menu()" onmouseout="cacher_menu()">List2</a>
         </div>
     </div>
 
-    <div class="list1">
-        <a href="#"  >List1</a>
-        <div >
-            <a href="#">List2</a>
-            <a href="#">List2</a>
-            <a href="#">List2</a>
-            <a href="#">List2</a>
-        </div>
-    </div>
-
-    <div class="list1">
-        <a href="#" >List1</a>
-    </div>
-
-    <div class="list1">
-        <a href="#" >List1</a>
-    </div>
 
 
-</div>
+
+
 
 <div id="header">
     <img id="photo" src="img/1.jpg" alt="a"/>
 </div>
 <div id="main">
-	<form name="form1">
-    	<div id="form">
-        	<label>Leaving from: <input id="in" list="city_leaving" />
-        	</label>
-				<datalist id="city_leaving">
-				</datalist>
-			<label>Flying to: <input type="text" id="arrive"/></label>
-			<label>Date Departure: <input type="text" id="mydate"/></label>
+    <form name="form1">
+        <div id="form">
+            <label>Leaving from: <input list="city_leaving"/></label>
+            <datalist id="city_leaving"></datalist>
+            <label>Flying to: <input list="destination"/></label>
+            <datalist id="destination"></datalist>
+            <label>Date Departure: <input type="text" id="mydate"/></label>
             <label>Date Arrival: <input type="text" id="mydate2"/></label>
-			<label>Nºperson <input list="persons"  size="4"/></label><br/>
-				<datalist id="persons">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-				</datalist>
-			<button><a href="formulaire.html">Go</a></button>
-			
-			<div id="leave_city"></div>
-			<div id="flying_city"></div>
-		</div>
-	</form>
-	<div gldp-el="mydate" style="width:400px; height:300px; position:absolute; top:70px; left:100px;"></div>
+            <label>Nºperson <input list="persons" size="4"/></label><br/>
+            <datalist id="persons">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </datalist>
+            <button><a href="formulaire.html">Go</a></button>
+
+            <div id="leave_city"></div>
+            <div id="flying_city"></div>
+        </div>
+    </form>
+    <div gldp-el="mydate" style="width:400px; height:300px; position:absolute; top:70px; left:100px;"></div>
     <div gldp-el="mydate2" style="width:400px; height:300px; position:absolute; top:70px; left:100px;"></div>
 </div>
 
