@@ -35,25 +35,15 @@ function rouler_photo() {
 }
 
 
-function afficher_menu() {
-    showHideCount++;
-    console.log('afficher : ', showHideCount);
-    if (null != timerMenu) {
-        clearTimeout(timerMenu);  // Cancel timer
-        timerMenu = null;
-    }
-    document.getElementById('menu_cache').style.visibility = 'visible';
+function afficher()
+{
+    document.getElementById('menu_a_cacher').style.display="block";
+}
+function cacher()
+{
+    document.getElementById('menu_a_cacher').style.display="none";
 }
 
-function cacher_menu() {
-    showHideCount--;
-    console.log('cacher : ', showHideCount);
-    if ((null == timerMenu) && (0 == showHideCount)) {
-        timerMenu = setTimeout(function () {
-            document.getElementById('menu_cache').style.visibility = 'hidden';
-        }, 2000);
-    }
-}
 
 function acheter_ticket() {
     var city_depart = document.getElementById('city1').value;

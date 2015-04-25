@@ -31,24 +31,25 @@ button a:link {
 }
 
 #menu {
+    width: 120px;
     position: absolute;
-    margin: 0 auto;
+    left: 47%;
+    z-index: 2;
+    background-color: yellow;
 }
-
-#menu a {
-    text-decoration: none;
-    color: blue;
-    background-color: #ff684f;
+#menu a{
     display: block;
-    width: 200%;
-    height: 200%;
-
+    border-top: 1px solid #ff0000;
+    text-align: center;
+    padding: 7px 0;
+    text-decoration: none;
+}
+#menu a:hover{
+    background-color: hotpink;
+    color: #ffffff;
+    font-weight: bold;
 }
 
-a:hover {
-    color: red;
-}
-
-#menu_cache {
-    visibility: hidden;
+#menu_a_cacher {
+display: none;
 }
