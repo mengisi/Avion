@@ -103,6 +103,7 @@ function acheter_ticket() {
     URL += '&city_destine=' + city_destine;
     URL += '&date_depart=' + date_depart;
     URL += '&date_return=' + date_return;
+    URL += '&persons=' + persons;
     URL += '&prix_total=' + prix_total;
     
     //URL = encodeURIComponent(URL);

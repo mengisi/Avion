@@ -7,8 +7,19 @@
     <link href="styles/glDatePicker.default.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form>
 
+<div id="datas">
+<center>
+            <label>Leaving from: <input id='lf' onloadstart="gives_values();"/></label>
+            <label>Flying to: <input id="ft" value="" onloadstart="gives_values();"/></label><br/>
+            <label>Date Departure: <input id="dd" value="" onloadstart="gives_values();"/></label>
+            <label>Date Arrival: <input id="da" value="" onloadstart="gives_values();"/></label><br/>
+            <label>Nºperson <input id="np" value="" onloadstart="gives_values();"/></label>
+            <label>Price <input id="per" value="" onloadstart="gives_values();"/></label>
+</center>
+</div>
+<form>
+<fieldset>
 <center>
 <table>
 <tr>
@@ -51,6 +62,7 @@
 
 </table>
 </center>
+</fieldset> 
 </form>
 <script src="js/main2.js"></script>
 </body>
