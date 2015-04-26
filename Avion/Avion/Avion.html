@@ -7,29 +7,45 @@
     <link href="styles/glDatePicker.default.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-<div id="menu" onmouseover="afficher();" onmouseout="cacher();">
-    <a href="">Home</a>
-    <div id="menu_a_cacher">
-        <a href="">About Us</a>
+<div id="all_menus">
+<div class="menu" onmouseover="afficher("0");" onmouseout="cacher("0");">
+    <a href="">Accueil</a>
+    <div class="menu_a_cacher">
+        <a href="">Formulaire</a>
         <a href="">Nous joindre</a>
-        <a href="http://www.google.com">Contact Us</a>
+        <a href="http://www.google.com">菜单3</a>
     </div>
 </div>
-
+<div class="menu" onmouseover="afficher("1");" onmouseout="cacher("1");">
+    <a href="">Accueil</a>
+    <div class="menu_a_cacher">
+        <a href="">Formulaire</a>
+        <a href="">Nous joindre</a>
+        <a href="http://www.google.com">菜单3</a>
+    </div>
+</div>
+<div class="menu" onmouseover="afficher("2");" onmouseout="cacher("2");">
+    <a href="">Accueil</a>
+    <div class="menu_a_cacher">
+        <a href="">Formulaire</a>
+        <a href="">Nous joindre</a>
+        <a href="http://www.google.com">菜单3</a>
+    </div>
+</div>
+</div>
 <div id="header">
     <img id="photo" src="img/1.jpg" alt="a"/>
 </div>
 <div id="main">
     <form name="form1">
         <div id="form">
-            <label>Leaving from: <input id="city1" list="city_leaving"/></label>
+            <label>Leaving from: <input id="city1" list="city_leaving" oninput="activer_go();"/></label>
             <datalist id="city_leaving"></datalist>
-            <label>Flying to: <input id="city2" list="destination"/></label>
+            <label>Flying to: <input id="city2" list="destination" oninput="activer_go();"/></label>
             <datalist id="destination"></datalist>
-            <label>Date Departure: <input type="text" id="mydate"/></label>
-            <label>Date Arrival: <input type="text" id="mydate2"/></label>
-            <label>Nºperson <input id="people" list="persons" size="4"/></label><br/>
+            <label>Date Departure: <input type="text" id="mydate" oninput="activer_go();"/></label>
+            <label>Date Arrival: <input type="text" id="mydate2" oninput="activer_go();"/></label>
+            <label>Nºperson <input id="people" list="persons" size="4" oninput="activer_go();"/></label><br/>
             <datalist id="persons">
                 <option>1</option>
                 <option>2</option>
@@ -38,7 +54,7 @@
                 <option>5</option>
                 <option>6</option>
             </datalist>
-            <button onclick="acheter_ticket();">Go</button>
+            <button id="go" disabled="disabled" onclick="acheter_ticket();">Go</button>
 
             <div id="leave_city"></div>
             <div id="flying_city"></div>

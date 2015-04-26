@@ -7,8 +7,8 @@ window.onload = function () {
     console.log(getParameterByName('city_depart'));
     var city_depart_b=getParameterByName('city_depart');
     var city_destine_b=getParameterByName('city_destine');
-    var date_depart_b=getParameterByName('date_depart');
-    var date_return_b=getParameterByName('date_return');
+    var date_depart_b=getParameterByName('date_d');
+    var date_return_b=getParameterByName('date_r');
     var persons_b=getParameterByName('persons');
     var prix_total_b=getParameterByName('prix_total');
     document.getElementById('lf').value =city_depart_b;

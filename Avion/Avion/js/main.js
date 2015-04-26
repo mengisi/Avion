@@ -35,15 +35,46 @@ function rouler_photo() {
 }
 
 
-function afficher()
+function afficher(a)
 {
-    document.getElementById('menu_a_cacher').style.display="block";
+	switch(a){
+		case "1":
+		document.getElementsByClassName('menu_a_cacher')[0].style.display="block";
+		break;
+		case "2":
+		document.getElementsByClassName('menu_a_cacher')[1].style.display="block";
+		break;
+		default:
+		document.getElementsByClassName('menu_a_cacher')[2].style.display="block";
+		}
 }
 function cacher()
 {
-    document.getElementById('menu_a_cacher').style.display="none";
+	switch (b){
+		case "1":
+		document.getElementsByClassName('menu_a_cacher')[0].style.display="none";
+		break;
+		case "2":
+		document.getElementsByClassName('menu_a_cacher')[1].style.display="none";
+		break;
+		default:
+		document.getElementsByClassName('menu_a_cacher')[2].style.display="none";
+		}
 }
-
+ 
+function activer_go(){
+	var activer=true;
+	all_inputs= getElementsByTagName('INPUT');
+	for (var i=0; i<all_inputs.length;i++){
+		if(''=== all_inputs[i].value){
+			activer=false;
+			break;
+		}
+	}
+	document.getElementById('go').disabled !=activer;
+	return activer;
+	
+}
 
 function acheter_ticket() {
     var city_depart = document.getElementById('city1').value;
@@ -91,8 +122,8 @@ function acheter_ticket() {
     URL += '?';
     URL += 'city_depart=' + city_depart;
     URL += '&city_destine=' + city_destine;
-    URL += '&date_depart=' + date_depart;
-    URL += '&date_return=' + date_return;
+    URL += '&date_d=' + date_d;
+    URL += '&date_r' + date_r;
     URL += '&persons=' + persons;
     URL += '&prix_total=' + prix_total;
     

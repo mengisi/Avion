@@ -1,12 +1,12 @@
 
 body {
     margin: 2% 13%;
-    background-color: lightgrey;
-    border: 10px solid #bb5e5e;
+    background-color: white;
+    /*border: 10px solid #bb5e5e;*/
 }
 
 #header {
-    background-color: #bb5e5e;
+    /*background-color: #bb5e5e;*/
 }
 
 img {
@@ -17,8 +17,11 @@ img {
 
 #main {
     background-color: lightgrey;
-    border: 5px solid #bb5e5e;
-    padding: 5px;
+    /*border: 5px solid #bb5e5e;*/
+    width: 97%;
+    padding-left:1%;
+    margin: 0 1%;
+   
 }
 
 datalist {
@@ -29,27 +32,32 @@ button a:link {
     text-decoration: none;
     color: black;
 }
-
-#menu {
-    width: 120px;
-    position: absolute;
-    left: 47%;
+#all_menus{
+	position:absolute;
+	right:15%;
+	display:inline-block;
+	width:60%
+}
+.menu {
+	display:inline-block;
     z-index: 2;
-    background-color: yellow;
+    width:15%;
+    margin: 0 5%;
 }
-#menu a{
+.menu a{
     display: block;
-    border-top: 1px solid #ff0000;
+    border-bottom: 3px solid #bb5e5e;
     text-align: center;
-    padding: 7px 0;
+    padding: 2% 0;
     text-decoration: none;
+    color:#bb5e5e;
 }
-#menu a:hover{
-    background-color: hotpink;
+.menu a:hover{
+    background-color: #bb5e5e;
     color: #ffffff;
     font-weight: bold;
 }
 
-#menu_a_cacher {
+.menu_a_cacher {
 display: none;
 }
