@@ -38,7 +38,7 @@ function rouler_photo() {
 function afficher(div){
 	div.lastElementChild.style.display="block";
 }
-function cacher(){
+function cacher(div){
 	div.lastElementChild.style.display="none";
 }
  

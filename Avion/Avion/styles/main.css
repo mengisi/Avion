@@ -21,12 +21,11 @@ img {
 
 }
 
-#main {
+/*#main {
     background-color: rgba(53,68,88,0.6);
     width: 97%;
     padding-left:1%;
     margin: 0 1%;
-   
 }
 
 datalist {
@@ -63,7 +62,50 @@ button a:link {
     font-weight: bold;
     background-color: rgba(255,255,255,0.6);
 }
-
+*/
+#all_menus{
+	position:absolute;  /*j'ai ajouté*/
+    z-index: 2;
+    right:15%;
+    /*display:inline-block;*/
+    width:60%
+}
+.menu {
+    /*display:inline-block;*/
+    width:15%;
+    margin: 0 5%;
+    position: absolute;
+}
+#menu1{
+    left: 10px; /*j'ai ajouté*/
+}
+#menu2 {
+left: 200px; /*j'ai ajouté*/
+}
+#menu3{
+    left: 400px; /*j'ai ajouté*/
+}
+.menu a{
+    display: block;
+    border-bottom: 3px solid #bb5e5e;
+    text-align: center;
+    padding: 2% 0;
+    text-decoration: none;
+    color:#bb5e5e;
+}
 .menu_a_cacher {
 display: none;
+}
+
+#form2{
+	background-color: rgba(53,68,88,0.6);
+	position:absolute;
+	top:30%;
+	width:70%;
+}
+#datas{
+	border:3px solid #354458;
+	position:absolute;
+	top:18%;
+	width:70%;
 }
