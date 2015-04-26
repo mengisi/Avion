@@ -1,8 +1,10 @@
-
+#logo{
+	
+}
 body {
     margin: 2% 13%;
     background-color: white;
-    /*border: 10px solid #bb5e5e;*/
+    
 }
 h1{
 	color:#354458;
@@ -10,7 +12,7 @@ h1{
 }
 
 #header {
-    /*background-color: #bb5e5e;*/
+   
 }
 
 img {
@@ -21,7 +23,6 @@ img {
 
 #main {
     background-color: rgba(53,68,88,0.6);
-    /*border: 5px solid #bb5e5e;*/
     width: 97%;
     padding-left:1%;
     margin: 0 1%;

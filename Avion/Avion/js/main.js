@@ -35,45 +35,24 @@ function rouler_photo() {
 }
 
 
-function afficher(a)
-{
-	switch(a){
-		case "1":
-		document.getElementsByClassName('menu_a_cacher')[0].style.display="block";
-		break;
-		case "2":
-		document.getElementsByClassName('menu_a_cacher')[1].style.display="block";
-		break;
-		default:
-		document.getElementsByClassName('menu_a_cacher')[2].style.display="block";
-		}
+function afficher(div){
+	div.lastElementChild.style.display="block";
 }
-function cacher()
-{
-	switch (b){
-		case "1":
-		document.getElementsByClassName('menu_a_cacher')[0].style.display="none";
-		break;
-		case "2":
-		document.getElementsByClassName('menu_a_cacher')[1].style.display="none";
-		break;
-		default:
-		document.getElementsByClassName('menu_a_cacher')[2].style.display="none";
-		}
+function cacher(){
+	div.lastElementChild.style.display="none";
 }
  
-function activer_go(){                                     
+function activer_go(){
 	var activer=true;
-	var all_inputs= document.getElementsByTagName('INPUT');  
+	var all_inputs= document.getElementsByTagName('INPUT');
 	for (var i=0; i<all_inputs.length;i++){
 		if(''=== all_inputs[i].value){
 			activer=false;
 			break;
 		}
 	}
-	document.getElementById('go').disabled=!activer;   
+	document.getElementById('go').disabled = !activer;
 	return activer;
-	
 }
 
 function acheter_ticket() {
