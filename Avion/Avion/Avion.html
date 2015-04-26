@@ -7,6 +7,9 @@
     <link href="styles/glDatePicker.default.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<div id="logo">
+	<h1>MC AIRLINES</h1>
+</div>
 <div id="all_menus">
 <div class="menu" onmouseover="afficher("0");" onmouseout="cacher("0");">
     <a href="">Accueil</a>
@@ -39,13 +42,13 @@
 <div id="main">
     <form name="form1">
         <div id="form">
-            <label>Leaving from: <input id="city1" list="city_leaving" oninput="activer_go();"/></label>
+            <label>Leaving from: <input id="city1" list="city_leaving" onkeyup="activer_go();"/></label>
             <datalist id="city_leaving"></datalist>
-            <label>Flying to: <input id="city2" list="destination" oninput="activer_go();"/></label>
+            <label>Flying to: <input id="city2" list="destination" onkeyup="activer_go();"/></label>
             <datalist id="destination"></datalist>
-            <label>Date Departure: <input type="text" id="mydate" oninput="activer_go();"/></label>
-            <label>Date Arrival: <input type="text" id="mydate2" oninput="activer_go();"/></label>
-            <label>Nºperson <input id="people" list="persons" size="4" oninput="activer_go();"/></label><br/>
+            <label>Date Departure: <input type="text" id="mydate" onkeyup="activer_go();"/></label>
+            <label>Date Arrival: <input type="text" id="mydate2" onkeyup="activer_go();"/></label>
+            <label>Nºperson <input id="people" list="persons" size="4" onkeyup="activer_go();"/></label><br/>
             <datalist id="persons">
                 <option>1</option>
                 <option>2</option>

@@ -4,6 +4,10 @@ body {
     background-color: white;
     /*border: 10px solid #bb5e5e;*/
 }
+h1{
+	color:#354458;
+	padding: 0% 1%;
+}
 
 #header {
     /*background-color: #bb5e5e;*/
@@ -16,7 +20,7 @@ img {
 }
 
 #main {
-    background-color: lightgrey;
+    background-color: rgba(53,68,88,0.6);
     /*border: 5px solid #bb5e5e;*/
     width: 97%;
     padding-left:1%;
@@ -46,16 +50,17 @@ button a:link {
 }
 .menu a{
     display: block;
-    border-bottom: 3px solid #bb5e5e;
+    border-bottom: 3px solid #354458;
     text-align: center;
     padding: 2% 0;
     text-decoration: none;
-    color:#bb5e5e;
+    color:white;
+    background-color: rgba(53,68,88,0.6);
 }
 .menu a:hover{
-    background-color: #bb5e5e;
-    color: #ffffff;
+    color: #354458;
     font-weight: bold;
+    background-color: rgba(255,255,255,0.6);
 }
 
 .menu_a_cacher {

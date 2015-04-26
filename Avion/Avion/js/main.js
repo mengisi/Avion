@@ -62,16 +62,16 @@ function cacher()
 		}
 }
  
-function activer_go(){
+function activer_go(){                                     
 	var activer=true;
-	all_inputs= getElementsByTagName('INPUT');
+	var all_inputs= document.getElementsByTagName('INPUT');  
 	for (var i=0; i<all_inputs.length;i++){
 		if(''=== all_inputs[i].value){
 			activer=false;
 			break;
 		}
 	}
-	document.getElementById('go').disabled !=activer;
+	document.getElementById('go').disabled=!activer;   
 	return activer;
 	
 }
