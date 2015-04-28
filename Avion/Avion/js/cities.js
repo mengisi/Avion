@@ -1,4 +1,5 @@
 
+
 var cities_tb = [
     {name:'Tokyo',			        country:'Japan',		                    pop: 34100000,       value:2500},
     {name:'Mexico City',			country:'Mexico',		                    pop: 22650000,       value:2200},
@@ -35,10 +36,6 @@ var cities_tb = [
     {name:'Washington-Baltimore',	country:'United States',		            pop: 8100000,        value:1720},
     {name:'Nagoya',			        country:'Japan',		                    pop: 8050000,        value:1540}
 ];
-
-
-
-
 
 
 

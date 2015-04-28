@@ -3,96 +3,90 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/main2.css"/>
     <link href="styles/glDatePicker.default.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="logo">
-	<h1>MC AIRLINES</h1>
+    <h1>MC AIRLINES</h1>
 </div>
 <div id="all_menus">
-<div class="menu" onmouseover="afficher();" onmouseout="cacher();">
-    <a href="">Accueil</a>
-    <div class="menu_a_cacher">
-        <a href="">Formulaire</a>
-        <a href="">Nous joindre</a>
-        <a href="http://www.google.com">菜单3</a>
-    </div>
-</div>
-<div class="menu" onmouseover="afficher();" onmouseout="cacher();">
-    <a href="">Accueil</a>
-    <div class="menu_a_cacher">
-        <a href="">Formulaire</a>
-        <a href="">Nous joindre</a>
-        <a href="http://www.google.com">菜单</a>
-    </div>
-</div>
-<div class="menu" onmouseover="afficher();" onmouseout="cacher();">
-    <a href="">Accueil</a>
-    <div class="menu_a_cacher">
-        <a href="">Formulaire</a>
-        <a href="">Nous joindre</a>
-        <a href="http://www.google.com">菜单3</a>
-    </div>
-</div>
-</div>
-
-<div id="datas">
-<center>
-            <label>Leaving from: <input id='lf' onloadstart="gives_values();"/></label>
-            <label>Flying to: <input id="ft" value="" onloadstart="gives_values();"/></label><br/>
-            <label>Date Departure: <input id="dd" value="" onloadstart="gives_values();"/></label>
-            <label>Date Arrival: <input id="da" value="" onloadstart="gives_values();"/></label><br/>
-            <label>Nºperson <input id="np" value="" onloadstart="gives_values();"/></label>
-            <label>Price <input id="per" value="" onloadstart="gives_values();"/></label>
-</center>
+	<div id="menu1" class="menu" onmouseover="afficher(this);" onmouseout="cacher(this);">
+    	<a href="avion.html">Accueil</a>
+		<div class="menu_a_cacher">
+        	<a href="avion.html">Accueil</a>
+			<a href="avion.html">Accueil</a>
+			<a href="http://www.google.com">菜单3</a>
+		</div>
+	</div>
+	<div id="menu2" class="menu" onmouseover="afficher(this);" onmouseout="cacher(this);">
+    	<a href="">A propos</a>
+		<div class="menu_a_cacher">
+        	<a href="formulaire.html">formulaire</a>
+			<a href="formulaire.html">formulaire</a>
+			</div>
+	</div>
+	<div id="menu3" class="menu" onmouseover="afficher(this);" onmouseout="cacher(this);">
+   		 <a href="nous_joindre.html">Nous joindre</a>
+   		 <div class="menu_a_cacher">
+	   		 <a href="nous_joindre.html">Nous joindre</a>
+	   		 
+	   	</div>
+	</div>
 </div>
 <form id="form2">
-<fieldset>
-<center>
-<table>
-<tr>
-   <td>Name:</td>
-   <td> 
-   		<input type="text" name="name" size=18 maxlength=18> Date Birth:
-   		<input type="text" name="surname" size=18 maxlength=18> ID
-   		<input type="text" name="id" size=8 maxlength=8> </td>
-<tr>
-   <td>Surname:</td>
-   <td><input type="text" name="surname" size=30 maxlength=30></td>
-<tr>
-   <td>Addres:</td>
-   <td><input type="text" name="addres" size=48 maxlength=48></td>
-<tr>
-  <td>Postal Code:</td>
-  <td><input type="text" name="postal_code" size=6 maxlength=6> City:
-  <input type="text" name="city" size=30 maxlength=30></td>
-<tr>
-   <td>Province: </td>
-   <td>
-   		<input type="text" name="province" size=20 maxlength=20>Phone:
-   		<input type="text" name="phone" size=18 maxlength=18></td>
-<tr>
-   <td>Option:</td>
-   <td> <select name="option">
-            <option>option 1</option>
-            <option>option 1</option>
-            <option>option 1</option>
-            <option>option 1</option>
-            <option>option 1</option>
-
-        </select>Choose one option</td>
-
-<tr>
-   <td><b>Click here:</b></td>
-   <td align=center>
-       <input type="submit" value="Confirm Buy ">
-       <input type="reset" value="Reset"></td>
-
-</table>
-</center>
-</fieldset> 
+    <table>
+        <caption class="bold">Voici vos informations d'achat</caption>
+        <thead>
+        <tr>
+            <th>Départ</th>
+            <th>Destination</th>
+            <th>Date de départ</th>
+            <th>Date de retour</th>
+            <th>Nombre de personnes</th>
+            <th>Prix total</th>
+        </tr>
+        <tr id="result"></tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="bold" colspan="6">Veuillez rempliz ce formulaire pour continuer</td>
+        </tr>
+        <tr>
+            <td class="td1" colspan="3">Nom: <input type="text" name="name" size=18 maxlength=18></td>
+            <td class="td2" colspan="3">Prénom: <input type="text" name="surname" size=30 maxlength=30></td>
+        </tr>
+        <tr>
+            <td class="td1" colspan="3">Addresse: <input type="text" name="addres" size=35 maxlength=35></td>
+            <td class="td2" colspan="3">Code postal: <input type="text" name="postal" size=30 maxlength=30></td>
+        </tr>
+        <tr>
+            <td class="td1" colspan="3">Province: <input type="text" name="city" size=30 maxlength=30></td>
+            <td class="td2" colspan="3">Ville: <input type="text" name="province" size=20 maxlength=20></td>
+        </tr>
+        <tr>
+            <td class="td1" colspan="3">Choose one option:
+                <select name="option">
+                    <option>option 1</option>
+                    <option>option 1</option>
+                    <option>option 1</option>
+                    <option>option 1</option>
+                    <option>option 1</option>
+                </select>
+                </select></td>
+            <td class="td2" colspan="3">Phone: <input type="text" name="phone" size=18 maxlength=18></td>
+        </tr>
+        </tbody>
+    </table>
+	<a href="seat.html" class="likeboton">Click ici pour selectione votre seat</a> 
+    <div id="button">
+    <a href="" type="submit">Confirmer</a>
+    <a href="">Modifier</a>
+    <a href="" type="reset">Reset</a>
+	</div>
 </form>
+
+<script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/main2.js"></script>
 </body>
 </html>

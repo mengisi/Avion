@@ -1,3 +1,4 @@
+
 'use strict';
 window.onload=initialiser();
     function initialiser() {
@@ -13,3 +14,10 @@ window.onload=initialiser();
             map: carte
         });
     }
+
+function afficher(div){
+	div.lastElementChild.style.display="block";
+}
+function cacher(div){
+	div.lastElementChild.style.display="none";
+}

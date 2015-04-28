@@ -1,9 +1,8 @@
-#logo{
-	
-}
+
 body {
     margin: 2% 13%;
     background-color: white;
+    font-family: Arial, Helvetica, Verdana;
     
 }
 h1{
@@ -18,35 +17,34 @@ h1{
 img {
     width: 98%;
     padding: 0% 1%;
-
+}
+#main{
+	background-color: rgba(53,68,88,0.6);
+	width:96%;
+	margin:0 1%;
+	padding:1% 1%;
+	
 }
 
-/*#main {
-    background-color: rgba(53,68,88,0.6);
-    width: 97%;
-    padding-left:1%;
-    margin: 0 1%;
-}
-
-datalist {
-    display: none;
-}
-
-button a:link {
-    text-decoration: none;
-    color: black;
-}
 #all_menus{
 	position:absolute;
-	right:15%;
-	display:inline-block;
-	width:60%
+    z-index: 2;
+    right:15%;
+    width:60%
 }
 .menu {
-	display:inline-block;
-    z-index: 2;
     width:15%;
     margin: 0 5%;
+    position: absolute;
+}
+#menu1{
+    left: 10%; 
+}
+#menu2 {
+left: 30%; 
+}
+#menu3{
+    left: 50%; 
 }
 .menu a{
     display: block;
@@ -62,38 +60,7 @@ button a:link {
     font-weight: bold;
     background-color: rgba(255,255,255,0.6);
 }
-*/
-#all_menus{
-	position:absolute;  /*j'ai ajouté*/
-    z-index: 2;
-    right:15%;
-    /*display:inline-block;*/
-    width:60%
-}
-.menu {
-    /*display:inline-block;*/
-    width:15%;
-    margin: 0 5%;
-    position: absolute;
-}
-#menu1{
-    left: 10px; /*j'ai ajouté*/
-}
-#menu2 {
-left: 200px; /*j'ai ajouté*/
-}
-#menu3{
-    left: 400px; /*j'ai ajouté*/
-}
-.menu a{
-    display: block;
-    border-bottom: 3px solid #bb5e5e;
-    text-align: center;
-    padding: 2% 0;
-    text-decoration: none;
-    color:#bb5e5e;
-}
-.menu_a_cacher {
+.menu_a_cacher{
 display: none;
 }
 
@@ -103,9 +70,9 @@ display: none;
 	top:30%;
 	width:70%;
 }
-#datas{
-	border:3px solid #354458;
-	position:absolute;
-	top:18%;
-	width:70%;
+#datas {
+    border: 3px solid #354458;
+    position: absolute;
+    top: 18%;
+    width: 70%;
 }

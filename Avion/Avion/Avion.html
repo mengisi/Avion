@@ -11,44 +11,41 @@
 	<h1>MC AIRLINES</h1>
 </div>
 <div id="all_menus">
-<div id="menu1" class="menu" onmouseover="afficher(this);" onmouseout="cacher(this);">
-    <a href="">Accueil</a>
-    <div class="menu_a_cacher">
-        <a href="">Formulaire</a>
-        <a href="">Nous joindre</a>
-        <a href="http://www.google.com">菜单3</a>
-    </div>
-</div>
-<div id="menu2" class="menu" onmouseover="afficher(this);" onmouseout="cacher(this);">
-    <a href="">Accueil</a>
-    <div class="menu_a_cacher">
-        <a href="">Formulaire</a>
-        <a href="">Nous joindre</a>
-        <a href="http://www.google.com">菜单</a>
-    </div>
-</div>
-<div id="menu3" class="menu" onmouseover="afficher(this);" onmouseout="cacher(this);">
-    <a href="">Accueil</a>
-    <div class="menu_a_cacher">
-        <a href="">Formulaire</a>
-        <a href="">Nous joindre</a>
-        <a href="http://www.google.com">菜单3</a>
-    </div>
-</div>
-</div>
-<div id="header">
+	<div id="menu1" class="menu" onmouseover="afficher(this);" onmouseout="cacher(this);">
+    	<a href="avion.html">Accueil</a>
+		<div class="menu_a_cacher">
+        	<a href="avion.html">Accueil</a>
+			<a href="avion.html">Accueil</a>
+			<a href="http://www.google.com">菜单3</a>
+		</div>
+	</div>
+	<div id="menu2" class="menu" onmouseover="afficher(this);" onmouseout="cacher(this);">
+    	<a href="">A propos</a>
+		<div class="menu_a_cacher">
+        	<a href="formulaire.html">formulaire</a>
+			<a href="formulaire.html">formulaire</a>
+			</div>
+	</div>
+	<div id="menu3" class="menu" onmouseover="afficher(this);" onmouseout="cacher(this);">
+   		 <a href="nous_joindre.html">Nous joindre</a>
+   		 <div class="menu_a_cacher">
+	   		 <a href="nous_joindre.html">Nous joindre</a>
+	   		 
+	   	</div>
+	</div>
+</div><div id="header">
     <img id="photo" src="img/1.jpg" alt="a"/>
 </div>
 <div id="main">
     <form name="form1">
         <div id="form">
-            <label>Leaving from: <input id="city1" list="city_leaving" onkeyup="activer_go();"/></label>
+            <label>Leaving from: <input id="city1" list="city_leaving" size="15" onkeyup="activer_go();"/></label>
             <datalist id="city_leaving"></datalist>
-            <label>Flying to: <input id="city2" list="destination" onkeyup="activer_go();"/></label>
+            <label>Flying to: <input id="city2" list="destination" size="15" onkeyup="activer_go();"/></label>
             <datalist id="destination"></datalist>
-            <label>Date Departure: <input type="text" id="mydate" onkeyup="activer_go();"/></label>
-            <label>Date Arrival: <input type="text" id="mydate2" onkeyup="activer_go();"/></label>
-            <label>Nºperson <input id="people" list="persons" size="4" onkeyup="activer_go();"/></label><br/>
+            <label>Date Departure: <input type="text" id="mydate"  onkeyup="activer_go();"/></label>
+            <label>Date Arrival: <input type="text" id="mydate2"  onkeyup="activer_go();"/></label>
+            <label>Nºperson <input id="people" list="persons" size="3" onkeyup="activer_go();"/></label><br/>
             <datalist id="persons">
                 <option>1</option>
                 <option>2</option>
@@ -57,8 +54,7 @@
                 <option>5</option>
                 <option>6</option>
             </datalist>
-            <button id="go" disabled="disabled" onclick="acheter_ticket();">Go</button>
-
+            <input type="button" id="go" value="GO" disabled="disabled" onclick="acheter_ticket();"/>
             <div id="leave_city"></div>
             <div id="flying_city"></div>
         </div>
@@ -73,4 +69,3 @@
     <script src="js/cities.js"></script>
     <script src="js/main.js"></script>
 </body>
-</html>

@@ -1,3 +1,4 @@
+
 'use strict';
 
 var count = 0;
@@ -27,7 +28,7 @@ function create_city_tb() {
 
 function rouler_photo() {
     if (count == 4) {
-        count = 0
+        count = 0;
     }
     count++;
     document.getElementById('photo').src = 'img/' + count + '.jpg';
@@ -45,7 +46,7 @@ function cacher(div){
 function activer_go(){
 	var activer=true;
 	var all_inputs= document.getElementsByTagName('INPUT');
-	for (var i=0; i<all_inputs.length;i++){
+	for (var i=0; i<all_inputs.length-1;i++){
 		if(''=== all_inputs[i].value){
 			activer=false;
 			break;
@@ -59,8 +60,10 @@ function acheter_ticket() {
     var city_depart = document.getElementById('city1').value;
     var city_destine = document.getElementById('city2').value;
     var date_d = document.getElementById('mydate').value;
-    console.log(date_d);
+    var month_departure = mydate.getMonth();
+    console.log("mes de partida", month_departure);
     var date_r = document.getElementById('mydate2').value;
+    var month_return = date_r.getMonth();//I don't know how to get the month in another way
     console.log(date_r);
     var date_depart_aux= date_d.split('/');
     var date_return_aux=date_r.split('/');
@@ -88,7 +91,7 @@ function acheter_ticket() {
     } else {
         console.log('Date not valide');
     }
-    if(12>= (date_depart_aux[1]-1)>6){
+    if( 12> month_departure >6){ // I need the month
         prix_total=(days*0.08*prix_base);
         prix_total=prix_total.toFixed(2);
         console.log("prix total s/w:", prix_total);
@@ -97,17 +100,16 @@ function acheter_ticket() {
         prix_total=prix_total.toFixed(2);
         console.log("prix total j/j:", prix_total);
         }
+
     var URL = 'formulaire.html';
     URL += '?';
     URL += 'city_depart=' + city_depart;
     URL += '&city_destine=' + city_destine;
     URL += '&date_d=' + date_d;
-    URL += '&date_r' + date_r;
+    URL += '&date_r=' + date_r;
     URL += '&persons=' + persons;
     URL += '&prix_total=' + prix_total;
     
-    //URL = encodeURIComponent(URL);
     window.open(URL);
 }
-
 
