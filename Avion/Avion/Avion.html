@@ -16,7 +16,7 @@
 		<div class="menu_a_cacher">
         	<a href="avion.html">Accueil</a>
 			<a href="avion.html">Accueil</a>
-			<a href="http://www.google.com">菜单3</a>
+			<a href="avion.html">Accueil</a>
 		</div>
 	</div>
 	<div id="menu2" class="menu" onmouseover="afficher(this);" onmouseout="cacher(this);">
@@ -39,13 +39,13 @@
 <div id="main">
     <form name="form1">
         <div id="form">
-            <label>Leaving from: <input id="city1" list="city_leaving" size="15" onkeyup="activer_go();"/></label>
+            <label>Leaving from: <input id="city1" list="city_leaving" size="10" onchange="activer_go();"/></label>
             <datalist id="city_leaving"></datalist>
-            <label>Flying to: <input id="city2" list="destination" size="15" onkeyup="activer_go();"/></label>
+            <label>Flying to: <input id="city2" list="destination" size="10" onchange="activer_go();"/></label>
             <datalist id="destination"></datalist>
-            <label>Date Departure: <input type="text" id="mydate"  onkeyup="activer_go();"/></label>
-            <label>Date Arrival: <input type="text" id="mydate2"  onkeyup="activer_go();"/></label>
-            <label>Nºperson <input id="people" list="persons" size="3" onkeyup="activer_go();"/></label><br/>
+            <label>Date Departure: <input type="text" id="mydate"  onchange="activer_go();"/></label>
+            <label>Date Arrival: <input type="text" id="mydate2"  onchange="activer_go();"/></label>
+            <label>Nºperson <input id="people" list="persons" size="3" onchange="activer_go();"/></label><br/>
             <datalist id="persons">
                 <option>1</option>
                 <option>2</option>
@@ -55,8 +55,6 @@
                 <option>6</option>
             </datalist>
             <input type="button" id="go" value="GO" disabled="disabled" onclick="acheter_ticket();"/>
-            <div id="leave_city"></div>
-            <div id="flying_city"></div>
         </div>
     </form>
     <div gldp-el="mydate" style="width:400px; height:300px; position:absolute; top:70px; left:100px;"></div>

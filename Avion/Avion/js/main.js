@@ -1,22 +1,12 @@
-
 'use strict';
 
 var count = 0;
-var timerMenu = null;
-var showHideCount = 0;
-
-function getParameterByName(name) {
-    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-}
 
 window.onload = function () {
     $('#mydate').glDatePicker();
     $('#mydate2').glDatePicker();
     create_city_tb();
     rouler_photo();
-    console.log(getParameterByName('city_depart'));
-
 };
 
 function create_city_tb() {
@@ -36,80 +26,93 @@ function rouler_photo() {
 }
 
 
-function afficher(div){
-	div.lastElementChild.style.display="block";
+function afficher(div) {
+    div.lastElementChild.style.display = "block";
 }
-function cacher(div){
-	div.lastElementChild.style.display="none";
+function cacher(div) {
+    div.lastElementChild.style.display = "none";
 }
- 
-function activer_go(){
-	var activer=true;
-	var all_inputs= document.getElementsByTagName('INPUT');
-	for (var i=0; i<all_inputs.length-1;i++){
-		if(''=== all_inputs[i].value){
-			activer=false;
-			break;
-		}
-	}
-	document.getElementById('go').disabled = !activer;
-	return activer;
+
+function activer_go() {
+    var activer = true;
+    var all_inputs = document.getElementsByTagName('INPUT');
+    console.log(all_inputs);
+    for (var i = 0; i < all_inputs.length - 1; i++) {
+        console.log(all_inputs[i].value);
+        if ('' === all_inputs[i].value) {
+            activer = false;
+            break;
+        }
+    }
+    document.getElementById('go').disabled = !activer;
+    return activer;
 }
 
 function acheter_ticket() {
     var city_depart = document.getElementById('city1').value;
     var city_destine = document.getElementById('city2').value;
-    var date_d = document.getElementById('mydate').value;
-    var month_departure = mydate.getMonth();
-    console.log("mes de partida", month_departure);
-    var date_r = document.getElementById('mydate2').value;
-    var month_return = date_r.getMonth();//I don't know how to get the month in another way
-    console.log(date_r);
-    var date_depart_aux= date_d.split('/');
-    var date_return_aux=date_r.split('/');
-    var date_depart= new Date(date_depart_aux[2],date_depart_aux[0],date_depart_aux[1]-1);
-    console.log(date_depart);
-    var date_return= new Date(date_return_aux[2],date_return_aux[0],date_return_aux[1]-1);
-    console.log(date_return);
-    var prix_total=0;
-    var persons=document.getElementById('people').value;
+
+    var dd_origne = document.getElementById('mydate').value;
+    var rr_origne = document.getElementById('mydate2').value;
+    var dd, rr, dd_output, rr_output;
+    if (dd_origne.indexOf('/') > -1) {
+        var dd_origne_tableau = dd_origne.split('/');
+        var rr_origne_tableau = rr_origne.split('/');
+        dd = new Date(dd_origne_tableau[2], dd_origne_tableau[1] - 1, dd_origne_tableau[0]);
+        rr = new Date(rr_origne_tableau[2], rr_origne_tableau[1] - 1, rr_origne_tableau[0]);
+        dd_output = dd_origne_tableau[2] + '-' + dd_origne_tableau[1] + '-' + dd_origne_tableau[0];
+        rr_output = rr_origne_tableau[2] + '-' + rr_origne_tableau[1] + '-' + rr_origne_tableau[0];
+    } else {
+        dd_output = document.getElementById('mydate').value;
+        rr_output = document.getElementById('mydate2').value;
+        dd = new Date(dd_output);
+        rr = new Date(rr_output);
+    }
+    console.log(dd);
+    console.log(rr);
+    var prix_total = 0;
+    var persons = document.getElementById('people').value;
     console.log(persons);
     for (var i = 0; i < cities_tb.length; i++) {
         if (cities_tb[i].name == city_depart) {
             var prix_base = cities_tb[i].value;
+            console.log("price base:", prix_base);
         }
     }
     console.log(prix_base);
 
-    if (date_depart < date_return) {
-        console.log(date_depart);
-        var date_aux = date_return - date_depart;
-        console.log(date_aux);
-        console.log(date_aux);
-        var days = (((date_aux / 1000) / 60) / 60) / 24;
-        console.log('days:', days);
-    } else {
-        console.log('Date not valide');
-    }
-    if( 12> month_departure >6){ // I need the month
-        prix_total=(days*0.08*prix_base);
-        prix_total=prix_total.toFixed(2);
-        console.log("prix total s/w:", prix_total);
-        }else{
-        prix_total=(days*0.1*prix_base);
-        prix_total=prix_total.toFixed(2);
-        console.log("prix total j/j:", prix_total);
-        }
+    if (dd < rr) {
+        var date_dd_rr = rr.getTime() - dd.getTime();
+        var jours = (((date_dd_rr / 1000) / 60) / 60) / 24;
+        console.log(jours);
 
+    }
+
+    console.log("comparation:", dd < rr);
+
+    var month_dep = dd.getMonth();
+    console.log("month departure", month_dep);
+    if (12 > (month_dep + 1) && (month_dep + 1) > 6) {
+        prix_total = parseFloat((jours * 0.08 * prix_base));
+        prix_total = prix_total.toFixed(2);
+        console.log("prix total s/w:", prix_total);
+    } else {
+        prix_total = parseFloat((jours * 0.1 * prix_base));
+        prix_total = prix_total.toFixed(2);
+        console.log("prix total j/j:", prix_total);
+    }
+
+    if (dd < rr){
     var URL = 'formulaire.html';
     URL += '?';
     URL += 'city_depart=' + city_depart;
     URL += '&city_destine=' + city_destine;
-    URL += '&date_d=' + date_d;
-    URL += '&date_r=' + date_r;
+    URL += '&date_d=' + dd_output;
+    URL += '&date_r=' + rr_output;
     URL += '&persons=' + persons;
     URL += '&prix_total=' + prix_total;
-    
     window.open(URL);
+} else {
+        alert('Date not valide');
+    }
 }
-

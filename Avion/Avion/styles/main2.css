@@ -47,8 +47,12 @@ display: none;
 }
 
 table {
-    margin: 50px auto 30px;
+    /*margin: 50px auto 30px;*/
+    margin:5% auto 3%;
     border-collapse: collapse;
+    margin-left:20%;
+    margin-top:1%;
+    
 }
 
 caption{
@@ -103,23 +107,26 @@ tbody td{
     margin: 20px auto;
     padding: 0;
     text-align: center;
+    margin-left:20%;
 }
 
 #button a{
     text-decoration: none;
     display: inline-block;
-    background-color: #f3ff9e;
-    color: #000000;
-    padding: 5px 0;
-    width: 100px;
-    border: 1px solid green;
+    background-color: rgba(53,68,88,0.6);
+    color: white;
+    padding: 1% 0;
+    width: 15%;
+    border: 1px solid white;
     margin:0 30px 0 30px;
+    border: 1px solid rgb(53,68,88) ;
 }
 
 #button a:hover{
-    background-color: yellow;
-    color: #ff0000;
+    background-color: white;
+    color: rgba(53,68,88,0.6);
     font-weight: bold;
+    border: 1px solid rgb(53,68,88) ;
 }
 
 #form2{

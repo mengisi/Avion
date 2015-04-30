@@ -18,7 +18,7 @@ div div div {
 
 body > div {
     position: relative;
-    width: 230px;
+    width: 260px;
     margin-left: 200px;
 }
 
@@ -57,11 +57,12 @@ span {
 }
 
 
-.txt_rouge {
+.txt_rouge, #nb_seats {
     /*Créé par la function*/
     color: #ff0000;
     font-weight: bold;
-    margin-left: 50px;
+    font-size: 130%;
+
 }
 
 .txt_noir {
@@ -71,7 +72,6 @@ span {
 
 button{
     font-weight: bold;
-    margin-left: 20px;
     font-size: 80%;
 }
 

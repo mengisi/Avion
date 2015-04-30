@@ -64,6 +64,14 @@ left: 30%;
 display: none;
 }
 
+#go{
+border: 1px solid white ;
+background-color: rgba(53,68,88,0.6);
+width:7%;
+color:white;
+font-weight: bold;
+}
+
 #form2{
 	background-color: rgba(53,68,88,0.6);
 	position:absolute;
